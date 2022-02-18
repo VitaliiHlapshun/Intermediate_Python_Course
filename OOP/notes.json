@@ -1,0 +1,18 @@
+{
+    "test_1": {
+        "author": "John",
+        "author_rate": 0.9
+    },
+    "test_2": {
+        "author": "James",
+        "author_rate": 0.5
+    },
+    "test_3": {
+        "author": "Viktor",
+        "author_rate": 0.1
+    },
+    "test_4": {
+        "author": "Ivan",
+        "author_rate": 0.9
+    }
+}
