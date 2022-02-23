@@ -23,7 +23,7 @@ class User:
 # Write your code below
 class Admin(Employee, User):
     def __init__(self):
-        super().__init__('surname')
+        super().__init__()
         self.age = self.id
         user = User(self.surname)
         a = User.__init__(self, 'self.surname', user.username.upper())
@@ -34,5 +34,5 @@ class Admin(Employee, User):
 
 
 e1 = Employee('Hlapshun')
-e3 = Admin()
+e3 = Admin('sdf')
 e3.say_user_info()
