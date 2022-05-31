@@ -11,7 +11,7 @@ class Employee:
 
 class Admin(Employee):
     def say_id(self):
-        # super().say_id()
+        super().say_id()
         print("I am an admin.")
 
 

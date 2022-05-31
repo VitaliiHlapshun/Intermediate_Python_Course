@@ -18,4 +18,4 @@ def calc_paint_amount(wall_measurements):
 
 
 print('Number of paint gallons needed: ')
-print(str(calc_paint_amount(walls)))
+print(calc_paint_amount(walls))

@@ -20,11 +20,11 @@
 # enclosing_function()
 
 # option two!
-def enclosing_function():
-    var = [1, 2]
-    def nested_function():
-        nonlocal var
-        var = [2, 4]
-    nested_function()
-    print(var)
-enclosing_function()
+# def enclosing_function():
+#     var = [1, 2]
+#     def nested_function():
+#         nonlocal var
+#         var = [2, 4]
+#     nested_function()
+#     print(var)
+# enclosing_function()

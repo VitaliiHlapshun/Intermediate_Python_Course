@@ -7,17 +7,17 @@ class Animal:
 
 class Dog(Animal):
     def action(self):
-        # super().action()
+        super().action()
         print("{} wags tail. Awwww".format(self.name))
 
 
 class Wolf(Animal):
     def action(self):
-        # super().action()
+        super().action()
         print("{} bites. OUCH!".format(self.name))
 
 
-class Hybrid(Dog, Wolf):
+class Hybrid(Wolf, Dog):
     def action(self):
         super().action()
         Wolf.action(self)
