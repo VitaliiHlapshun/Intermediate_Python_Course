@@ -1,4 +1,4 @@
-import database
+*import database
 
 instrument = 'Kora'
 database.connect_to_database()

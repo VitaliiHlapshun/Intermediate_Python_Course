@@ -1,0 +1,63 @@
+import requests
+
+def post_order():
+    """Retrieving order list from MTM"""
+    data = {"version": 1,
+             "design_type": 1,
+             "external_system_id": 408,
+             "customer[first_name]": "testorowski",
+             "customer[last_name]": "testorosky",
+             "customer[phone]": 65765757,
+             "customer[country_id]": 186,
+             "make[make_id]": 3,
+             "delivery[leadtime_status]": 1,
+             "delivery[send_to]": 1,
+             "delivery[send_to_data][shop_point_of_sale_id]": 34,
+             "measurements[fit_id]": 296,
+             "measurements[master_size_type]": 1,
+             "measurements[master_size]": 40,
+             "measurements[sleeve_type]": 2,
+             "measurements[shirt_collar]": 0,
+             "measurements[shirt_chest]": 1,
+             "measurements[shirt_waist]": -6,
+             "measurements[shirt_hips]": 0,
+             "measurements[shirt_front_length]": 0,
+             "measurements[shirt_back_yoke]": 0,
+             "measurements[shirt_back_length]": 0,
+             "measurements[shirt_left_sleeve_length]": 0,
+             "measurements[shirt_right_sleeve_length]": 0,
+             "measurements[shirt_left_short_sleeve_length]": 0,
+             "measurements[shirt_right_short_sleeve_length]": 0,
+             "measurements[shirt_left_cuff_length]": 0,
+             "measurements[shirt_right_cuff_length]": 0,
+             "measurements[shirt_armhole]": 0,
+             "measurements[shirt_biceps]": 0,
+             "measurements[shirt_forearm]": 0,
+             "measurements[left_shoulder_type]": 2,
+             "measurements[left_shoulder_difference]": 1,
+             "measurements[right_shoulder_type]": 2,
+             "measurements[right_shoulder_difference]": 1,
+             "items[0][name]": "testow1",
+             "items[0][quantity]": 1,
+             "items[0][fabric][fabric_id]": 678,
+             "items[0][collar][collar_style_id]": 38,
+             "items[0][collar][interlining_id]": 1,
+             "items[0][collar][bones]": 1,
+             "items[0][cuff][cuff_style_id]": 3,
+             "items[0][cuff][interlining_id]": 1,
+             "items[0][gauntlet][gauntlet_style_id]": 2,
+             "items[0][pocket][pockets]": 1,
+             "items[0][front][front_type]": 1,
+             "items[0][front][front_style_id]": 2,
+             "items[0][buttons][button_type]": 1,
+             "items[0][buttons][button_style_id]": 2,
+             "items[0][label][label]": True,
+             "items[0][label][inserts][0]": 3,
+             "items[0][label][gusset_id]": 3,
+             "items[0][back][back_style_id]": 3}
+    response = requests.post(
+        url='https://mtm-demo.e-berg.com/api/order/addOrder?key'
+            '=90e536a6d69c4937e8176ae86695b446', data=data)
+    return response.json()
+
+print(post_order())
